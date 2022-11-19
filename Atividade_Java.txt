@@ -1,0 +1,40 @@
+
+package atividade1;
+import java.util.Scanner;
+
+/**
+ *
+ * Faça um programa onde sao recebidas 3 notas, digitadas, via comando pelo usuario, reais, e
+ * depois e apresentada a m  ́ edia entre elas.  ́
+ * 
+ */
+public class Atividade1 {
+    public static void main(String[] args) {
+      Scanner ler = new Scanner(System.in);
+      
+      double aluno;
+      double frequencia;
+      
+      System.out.println("Nota");
+      aluno = ler.nextDouble();
+      System.out.println("informe frequencia");
+      frequencia = ler.nextDouble();
+      
+      frequencia = frequencia -(frequencia * 0.80);
+      
+      if ( aluno >= 7 && frequencia >= 0.75) {
+           System.out.println("Aprovado");
+            System.out.println(aluno + " " + frequencia);
+           
+      }
+      else if ( aluno <= 7 && aluno >=4 && frequencia > 0.75) {
+           System.out.println("recuperacao");
+           System.out.println(aluno + " " + frequencia);
+      }
+      else if ( aluno >= 4 && frequencia <= 0.75){
+          System.out.println("Reprovado:");
+          System.out.println(aluno + " " + frequencia);
+      }
+    }
+    
+}
